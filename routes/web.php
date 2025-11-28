@@ -7,6 +7,7 @@ use App\Http\Controllers\SpotController;
 use App\Http\Controllers\AdminSpotController;
 use App\Http\Controllers\SpotCategoryController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserManageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,5 +119,12 @@ Route::middleware(['admin'])->group(function () {
         ->name('admin.spotCategories.destroy');
     Route::post('/admin/spot-categories/status/{id}', [SpotCategoryController::class, 'statusUpdate'])
         ->name('admin.spotCategories.status');
+
+    /*
+    | Admin User Management
+    */
+
+    Route::get('/admin/users', [UserManageController::class, 'index'])->name('admin.users');
+    Route::post('/admin/users/status/{id}', [UserManageController::class, 'toggleStatus'])->name('admin.users.status');
 
 });

@@ -14,23 +14,27 @@
             <div class="row">
                 <!-- Card 1 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="card dashboard-card text-center p-3">
+                    <div class="card dashboard-card text-center p-3 hover-effect"
+                         onclick="window.location.href='{{ route('admin.spots.index') }}'"
+                         style="cursor: pointer;">
                         <div class="card-body">
                             <i class="fas fa-map-marker-alt card-icon text-primary"></i>
-                            <div class="stat-number">15</div>
-                            <div class="stat-label">Total Spots</div>
+                            <div class="stat-number">{{ $total_spots }}</div>
+                            <div class="stat-label">Total Active Spots</div>
                         </div>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="card dashboard-card text-center p-3">
-                        <div class="card-body">
-                            <i class="fas fa-users card-icon text-success"></i>
-                            <div class="stat-number">128</div>
-                            <div class="stat-label">Registered Users</div>
+                    <div class="card dashboard-card text-center p-3 hover-effect"
+                         onclick="window.location.href='{{ route('admin.users') }}'"
+                         style="cursor: pointer;">
+                            <div class="card-body">
+                                <i class="fas fa-users card-icon text-success"></i>
+                                <div class="stat-number">{{$total_registered_users}}</div>
+                                <div class="stat-label">Registered Users</div>
+                            </div>
                         </div>
-                    </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="col-lg-3 col-md-6">

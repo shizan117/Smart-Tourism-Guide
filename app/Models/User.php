@@ -19,6 +19,7 @@ class User extends Authenticatable
         'bio',
         'avatar',
         'has_selected_favorites',
+        'active',
     ];
 
     protected $hidden = [

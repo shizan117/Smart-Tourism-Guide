@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('avatar')->nullable();
             $table->text('bio')->nullable();
             $table->boolean('has_selected_favorites')->default(false);
+            $table->boolean('active')->default(1);   // 1 = active, 0 = inactive
 
 
             $table->rememberToken();

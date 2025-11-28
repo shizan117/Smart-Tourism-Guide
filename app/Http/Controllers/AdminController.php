@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Spot;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -64,7 +66,10 @@ class AdminController extends Controller
     // Show admin dashboard
     public function index()
     {
-        return view('backend.dashboard.dashboard');
+        $total_spots = Spot::where('is_active', true)->count();
+        $total_registered_users = User::where('role', 'user')->count();
+
+        return view('backend.dashboard.dashboard',compact('total_spots','total_registered_users'));
     }
 
     // Show admin users list

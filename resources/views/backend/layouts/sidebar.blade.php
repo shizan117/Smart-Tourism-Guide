@@ -40,7 +40,7 @@
             </li>
 
             <li><a href="#"><i class="fas fa-route"></i> <span class="menu-text">Trip Plans</span></a></li>
-            <li><a href="#"><i class="fas fa-users"></i> <span class="menu-text">Users</span></a></li>
+            <li><a href="{{route('admin.users')}}"><i class="fas fa-users"></i> <span class="menu-text">Users</span></a></li>
             <li><a href="#"><i class="fas fa-star"></i> <span class="menu-text">Reviews</span></a></li>
 
             <li class="menu-divider"></li>

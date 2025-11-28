@@ -82,6 +82,8 @@
 
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                 @if(auth()->user()->role == 'admin')
+                    <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}"><i class="fas fa-gauge me-2"></i> Dashboard</a></li>
+
                     <li><a class="dropdown-item" href="{{ route('admin.profile') }}"><i class="fas fa-user me-2"></i> Profile</a></li>
                     <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
                     <li><hr class="dropdown-divider"></li>

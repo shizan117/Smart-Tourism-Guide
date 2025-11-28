@@ -10,7 +10,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10f73536-ecbb-456c-a4fd-1f2a3a96c04f" name="Default Changelist" comment="spot category added" />
+    <list default="true" id="10f73536-ecbb-456c-a4fd-1f2a3a96c04f" name="Default Changelist" comment="spot category added">
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/dashboard/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +222,7 @@
       <workItem from="1764258047865" duration="739000" />
       <workItem from="1764259305775" duration="5296000" />
       <workItem from="1764323930229" duration="218000" />
-      <workItem from="1764324261787" duration="20000" />
+      <workItem from="1764324261787" duration="8331000" />
     </task>
     <task id="LOCAL-00001" summary="frontend blade done">
       <created>1758904242480</created>
@@ -381,14 +392,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="317" y="9" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1759337627785" />
-    <state x="450" y="247" key="NewPhpFileDialog" timestamp="1763728258296">
+    <state x="450" y="247" key="NewPhpFileDialog" timestamp="1764329539288">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="450" y="247" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1763728258296" />
-    <state x="33" y="0" key="SettingsEditor" timestamp="1764324281205">
+    <state x="450" y="247" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1764329539288" />
+    <state x="33" y="0" key="SettingsEditor" timestamp="1764324551423">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="33" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1764324281205" />
+    <state x="33" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1764324551423" />
     <state x="482" y="235" key="VCS.ChangelistChooser" timestamp="1763122000110">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -397,10 +408,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="468" y="199" key="VCS.EditChangelistDialog/0.0.1280.680@0.0.1280.680" timestamp="1758982505081" />
-    <state x="133" y="0" key="Vcs.Push.Dialog.v2" timestamp="1764265946485">
+    <state x="133" y="0" key="Vcs.Push.Dialog.v2" timestamp="1764324648542">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="133" y="0" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1764265946485" />
+    <state x="133" y="0" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1764324648542" />
     <state x="414" y="234" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1764265962184">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -413,10 +424,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="418" y="173" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1758981349787" />
-    <state x="367" y="220" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1764266576744">
+    <state x="367" y="220" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1764324558324">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="367" y="220" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1764266576744" />
+    <state x="367" y="220" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1764324558324" />
     <state x="213" y="147" key="run.anything.popup" timestamp="1759332038077">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
