@@ -1,0 +1,358 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+    --header-height: 60px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    margin: 0; /* Ensure no default body margin */
+}
+
+/* ---------------------------------------------------------------------- */
+/* ## Sidebar Styles */
+/* ---------------------------------------------------------------------- */
+
+#sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--secondary-color);
+    color: white;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.sidebar-header h3 i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Style for the new mobile close button (hidden by default) */
+#sidebarClose {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    display: none; /* Hidden on desktop/default */
+}
+
+
+.sidebar-menu {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin: 0;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #b8c7ce;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-menu a:hover, .sidebar-menu a.active {
+    background: rgba(0,0,0,0.2);
+    color: white;
+    border-left-color: var(--primary-color);
+}
+
+.sidebar-menu a i:first-child { /* Targets the main icon */
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-menu .menu-text {
+    flex: 1;
+}
+
+/* Submenu Styling */
+.sidebar-submenu {
+    background: rgba(0,0,0,0.1);
+    padding: 0;
+}
+
+.sidebar-submenu li {
+    width: 100%;
+}
+
+.sidebar-submenu a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 45px !important; /* Indentation */
+    border-left: none; /* Remove border from submenu items */
+    font-size: 0.95rem;
+    display: block; /* Submenu links don't need flex container */
+}
+
+/* Dropdown Caret Styling */
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: none; /* Hide default Bootstrap arrow */
+}
+
+/* Custom Chevron for Submenu */
+.sidebar-menu .submenu-icon {
+    margin-left: auto;
+    margin-right: 0;
+    transition: transform 0.2s;
+}
+
+.sidebar-menu a[aria-expanded="true"] .submenu-icon {
+    transform: rotate(180deg);
+}
+
+
+.sidebar-menu .badge {
+    float: right;
+}
+
+.menu-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 10px 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ## Main Content Styles (Desktop Default) */
+/* ---------------------------------------------------------------------- */
+
+#content {
+    margin-left: var(--sidebar-width);
+    transition: all 0.3s;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+#header {
+    height: var(--header-height);
+    background: white;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    margin-right: 15px;
+    text-align: right;
+}
+
+.user-name {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.user-role {
+    color: #6c757d;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: calc(100vh - var(--header-height));
+}
+
+/* Utility/Card/Table Styles */
+.dashboard-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.admin-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.table th {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 15px;
+}
+
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ## Collapsed Sidebar State (Desktop View) */
+/* ---------------------------------------------------------------------- */
+
+body.sidebar-collapsed #sidebar {
+    width: var(--sidebar-collapsed-width);
+}
+
+body.sidebar-collapsed #content {
+    margin-left: var(--sidebar-collapsed-width);
+}
+
+body.sidebar-collapsed .menu-text,
+body.sidebar-collapsed .sidebar-header h3 span,
+body.sidebar-collapsed .sidebar-menu .badge,
+body.sidebar-collapsed .user-info,
+body.sidebar-collapsed #sidebarClose, /* Ensure close button is hidden */
+body.sidebar-collapsed .sidebar-menu .submenu-icon /* Hide caret */
+{
+    display: none;
+}
+
+body.sidebar-collapsed .sidebar-submenu {
+    display: none !important; /* IMPORTANT: Hide all submenus when collapsed */
+}
+
+
+body.sidebar-collapsed .sidebar-header {
+    padding: 20px 10px;
+    text-align: center;
+    justify-content: center; /* Center content when collapsed */
+}
+
+body.sidebar-collapsed .sidebar-menu a {
+    padding: 15px;
+    justify-content: center;
+}
+
+body.sidebar-collapsed .sidebar-menu a i {
+    margin-right: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ## Responsive / Mobile Styles (Max-width 768px) */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* 1. Sidebar is moved off-screen by default on mobile */
+    #sidebar {
+        margin-left: calc(-1 * var(--sidebar-width));
+        width: var(--sidebar-width) !important;
+    }
+
+    /* 2. Content takes full width on mobile by default */
+    #content {
+        margin-left: 0 !important; /* Crucial override for mobile */
+        width: 100%;
+    }
+
+    /* 3. When 'active', sidebar slides in */
+    #sidebar.active {
+        margin-left: 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow for overlay effect */
+    }
+
+    /* 4. Show the new close button when sidebar is active on mobile */
+    #sidebar.active #sidebarClose {
+        display: block;
+    }
+
+    /* 5. Disable desktop collapse styles when the window is mobile size */
+    body.sidebar-collapsed #sidebar,
+    body.sidebar-collapsed #content {
+        width: var(--sidebar-width);
+        margin-left: calc(-1 * var(--sidebar-width)) !important;
+    }
+
+    /* 6. Header adjustments for mobile clarity */
+    .user-info {
+        display: none; /* Hide user name/role to save space */
+    }
+
+
+}

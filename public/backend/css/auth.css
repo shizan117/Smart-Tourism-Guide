@@ -1,0 +1,64 @@
+/*admin login*/
+/* Body background and centering for standalone page */
+body {
+    background-color: #f7f9fc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stacks header and main content vertically */
+    padding-bottom: 0;
+}
+
+.page-header {
+    width: 100%;
+    /* Ensure the header takes its necessary space */
+    flex-shrink: 0;
+}
+
+/* NEW: Wrapper to take up remaining height and center content */
+.main-content-wrapper {
+    flex-grow: 1; /* Takes up all remaining vertical space */
+    display: flex;
+    align-items: center; /* Vertical centering of the card */
+    justify-content: center; /* Horizontal centering (redundant with Bootstrap but good for fallback) */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.bg-gradient-bangladesh {
+    /* Inherited strong Bangladesh flag theme */
+    background: linear-gradient(135deg, #006a4e 0%, #f42a41 100%);
+}
+.admin-card {
+    max-width: 450px;
+    /* Remove fixed margins, let flexbox handle centering */
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 1rem;
+    /* Slightly more pronounced shadow for administrative importance */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Important for responsiveness within col-lg-6 */
+}
+.text-primary-teal {
+    color: #2a9d8f;
+}
+.btn-primary-teal {
+    background-color: #2a9d8f;
+    border-color: #2a9d8f;
+    transition: background-color 0.3s;
+}
+.btn-primary-teal:hover {
+    background-color: #1d7870;
+    border-color: #1d7870;
+}
+.form-control:focus {
+    border-color: #2a9d8f;
+    box-shadow: 0 0 0 0.25rem rgba(42, 157, 143, 0.25);
+}
+.alert-security {
+    background-color: #fceceb; /* Very light red/pink */
+    border-left: 5px solid #f42a41;
+    color: #f42a41;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
